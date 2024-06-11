@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :comments
 
   validates :title, presence: true, length: {minimum:8,
               too_short: "%{count} characters is too short for a title of your post"}
